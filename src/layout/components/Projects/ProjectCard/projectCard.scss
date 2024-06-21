@@ -1,0 +1,24 @@
+@import "../../../assets/styles/mixins.scss";
+
+.project {
+  @include respond(phone) {
+    position: relative;
+  }
+}
+
+.projects {
+  &__individual {
+    @include respond(phone) {
+      position: absolute !important;
+    }
+  }
+}
+
+.project-card-padding {
+  padding-top: 50vh;
+  padding-bottom: 50vh;
+  @include respond(phone) {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+}

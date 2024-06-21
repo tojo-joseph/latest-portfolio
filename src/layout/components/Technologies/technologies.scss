@@ -1,0 +1,32 @@
+@import "../../assets/styles/mixins.scss";
+
+.technologies {
+  padding-block: 5rem;
+
+  &__header {
+    margin-bottom: 47px;
+
+    h2 {
+      font-family: "Bebas Neue", sans-serif;
+      font-size: 4rem;
+    }
+  }
+
+  &__container {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+
+    li {
+      background-color: #ffffff;
+      border-radius: 4px;
+      padding: 8px 16px;
+      box-shadow: 0 0 3px var(--white);
+    }
+
+    h6 {
+      color: #061d31;
+    }
+  }
+}

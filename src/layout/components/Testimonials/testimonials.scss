@@ -1,0 +1,90 @@
+@import "../../assets/styles/mixins.scss";
+
+.testimonials {
+  padding-block: 5rem;
+
+  &__header {
+    margin-bottom: 105px;
+
+    h3 {
+      font-size: 4rem;
+      margin-bottom: 20.5px;
+    }
+  }
+
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 3rem 3rem;
+    flex-wrap: wrap;
+
+    h5,
+    h6 {
+      font-family: "Nunito", sans-serif;
+      font-weight: bold;
+      font-size: 18px;
+    }
+
+    img {
+      background-color: transparent;
+    }
+  }
+}
+
+.scroller {
+  max-width: 1280px;
+  // outline: 3px solid lime;
+
+  @include respond(phone) {
+    max-width: 90%;
+  }
+
+  &__inner {
+    padding-block: 2rem;
+    display: flex;
+    gap: 1rem;
+    // flex-wrap: wrap;
+  }
+}
+
+.scroller[data-animated="true"] {
+  overflow: hidden;
+  -webkit-mask: linear-gradient(
+    90deg,
+    transparent,
+    white 20%,
+    white 80%,
+    transparent
+  );
+  mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
+}
+
+.scroller[data-animated="true"] .scroller__inner {
+  width: max-content;
+  flex-wrap: nowrap;
+  animation: scroll var(--_animation-duration, 40s)
+    var(--_animation-direction, forwards) linear infinite;
+}
+
+.scroller[data-direction="right"] {
+  --_animation-direction: reverse;
+}
+
+.scroller[data-direction="left"] {
+  --_animation-direction: forwards;
+}
+
+.scroller[data-speed="fast"] {
+  --_animation-duration: 40s;
+}
+
+.scroller[data-speed="slow"] {
+  --_animation-duration: 150s;
+}
+
+@keyframes scroll {
+  to {
+    transform: translate(calc(-50% - 1.5rem));
+  }
+}

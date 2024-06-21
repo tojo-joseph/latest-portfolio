@@ -1,0 +1,19 @@
+@import "../../assets/styles/mixins.scss";
+
+.footer {
+  padding-block: 5rem;
+
+  &__container {
+    max-width: 1280px;
+    border: 2px solid #ffffff;
+    border-radius: 6px;
+    padding: 45px 56px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include respond(phone) {
+      max-width: 90%;
+    }
+  }
+}

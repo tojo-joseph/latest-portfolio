@@ -1,0 +1,110 @@
+@import "../../assets/styles/mixins.scss";
+
+.projects {
+  padding-block: 5rem;
+
+  &__header {
+    text-align: center;
+    margin-bottom: 96px;
+
+    h2 {
+      font-size: 4rem;
+      margin-bottom: 20.5px;
+    }
+  }
+
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 3rem 2rem;
+    flex-wrap: wrap;
+
+    p {
+      font-family: "Nunito", sans-serif;
+      font-size: 4rem;
+      font-weight: 900;
+    }
+
+    p.text-white {
+      color: var(--white);
+    }
+
+    p.text-gray {
+      color: var(--spanish-gray);
+    }
+  }
+
+  @keyframes pulse {
+    from,
+    to {
+      scale: 1;
+    }
+
+    50% {
+      scale: 1.08;
+    }
+  }
+
+  &__image {
+    z-index: 5;
+    background-color: var(--glassmorphism-dark-blue);
+    border-radius: 6px;
+    // backdrop-filter: blur(12px);
+  }
+
+  &__individual {
+    cursor: pointer;
+    // top: 50%;
+    // transform: translate(0, -50%);
+    // width: 562px;
+    // height: 370px;
+    // width: 39.0277%;
+    // height: 25.6944%;
+    // height: 100%;
+    // border: 1px solid var(--glassmorphism-border-color);
+    // border-radius: 6px;
+    // padding: 40px;
+    // display: flex;
+    // flex-direction: column;
+    // justify-content: center;
+    // align-items: center;
+    // background-color: var(--glassmorphism-dark-blue);
+    // backdrop-filter: blur(12px);
+    // transition: all 0.5s ease;
+    // text-align: left;
+    // position: relative;
+
+    // &:hover::before {
+    //   opacity: 1;
+    // }
+
+    // &::before {
+    //   background: radial-gradient(
+    //     800px circle at var(--mouse-x) var(--mouse-y),
+    //     rgba(16, 68, 116, 1),
+    //     transparent 40%
+    //   );
+    //   border-radius: inherit;
+    //   content: "";
+    //   opacity: 0;
+    //   height: 100%;
+    //   left: 0px;
+    //   position: absolute;
+    //   transition: opacity 500ms;
+    //   top: 0px;
+    //   width: 100%;
+    //   z-index: 2;
+    // }
+
+    @include respond(tab-port) {
+      width: 100%;
+      margin-bottom: 2rem;
+    }
+  }
+}
+
+.card:hover .content {
+  transform: rotateY(180deg);
+  transition: transform 0.5s;
+}

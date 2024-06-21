@@ -1,0 +1,30 @@
+@import "../../assets/styles/mixins.scss";
+
+.middlesection {
+  padding-block: 5rem;
+
+  &__container {
+    background: url("../../assets/images/blue-gradient-bg.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 46px 51px;
+    border-radius: 6px;
+    max-width: 1284px;
+
+    @include respond(phone) {
+      max-width: 90%;
+    }
+
+    h2 {
+      font-family: "Bebas Neue", sans-serif;
+      font-size: 4rem;
+      margin-bottom: 1.3rem;
+    }
+
+    p {
+      font-family: "Nunito", sans-serif;
+      margin-bottom: 1.3rem;
+    }
+  }
+}
